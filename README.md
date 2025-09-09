@@ -10,6 +10,10 @@ This project demonstrates advanced robotic navigation through three integrated c
 2. **RRT* Path Planning** - Custom optimal path generation algorithm  
 3. **Semantic Navigation** - Natural language-driven navigation using YOLO12 + OpenAI Vision API
 
+<img width="2167" height="1300" alt="worldview1" src="https://github.com/user-attachments/assets/0fa12c28-fb1f-4c63-b533-20748a0e4a64" />
+
+<img width="2167" height="1300" alt="worldview2" src="https://github.com/user-attachments/assets/fdc9d408-69a8-4811-b033-d0a0a712a097" />
+
 ## System Architecture
 
 ```
@@ -143,6 +147,10 @@ source install/setup.bash
 ros2 launch explore_lite explore.launch.py
 ```
 
+
+https://github.com/user-attachments/assets/c6928ba0-049b-43c7-96e7-5e10fc9fae0d
+
+
 #### Save Generated Map
 ```bash
 # Once exploration completes
@@ -159,7 +167,7 @@ ros2 run nav2_map_server map_saver_cli -f ~/griffin/office_map
 
 ### Task 2: RRT* Path Planning
 
-**Objective**: Demonstrate custom RRT* implementation for optimal path generation.
+**Objective**: Demonstrate RRT* implementation for optimal path generation.
 
 #### Setup Navigation with Custom Planner
 ```bash
@@ -195,6 +203,10 @@ ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_vie
 1. **Set Initial Pose**: Use "2D Pose Estimate" in RViz to localize robot
 2. **Set Goal**: Use "Nav2 Goal" tool to select destination
 3. **Observe**: RRT* algorithm generates optimal path in real-time
+
+
+https://github.com/user-attachments/assets/2003e0bc-2b82-4b31-bcfe-2ddc07e98714
+
 
 **RRT* Algorithm Features**:
 - ✅ Asymptotic optimality (converges to optimal solution)
@@ -249,6 +261,8 @@ rqt_image_view
 # Monitor semantic memory updates
 watch -n 1 "ls -la ~/griffin/config/"
 ```
+<img width="409" height="307" alt="percpetion_label" src="https://github.com/user-attachments/assets/f988fcbb-02ad-4b9e-b5f2-aad74edc0ce9" />
+<img width="945" height="441" alt="perception_terminal" src="https://github.com/user-attachments/assets/0df94a94-bb92-48b8-b5b9-c21b03c42455" />
 
 **System Capabilities**:
 - ✅ **YOLO12**: Fast, accurate object bounding boxes
@@ -258,7 +272,11 @@ watch -n 1 "ls -la ~/griffin/config/"
 - ✅ **Semantic Memory**: JSON-based object and scene database
 - ✅ **Real-time Visualization**: Annotated image stream with confidence scores
 
+
+https://github.com/user-attachments/assets/af3816c6-c596-4c95-9822-1a382f3f10e4
+
 ---
+
 
 ### Task 3B: Natural Language Navigation
 
@@ -312,6 +330,7 @@ Where do you want to go?
 - ✅ **Confidence Scoring**: Quality assessment of navigation targets
 - ✅ **Real-time Feedback**: Navigation progress and completion status
 
+[![Watch the video](resources/worldview1.png)](https://www.youtube.com/watch?v=naMtXU2QUeY)
 ---
 
 ## System Architecture Details
