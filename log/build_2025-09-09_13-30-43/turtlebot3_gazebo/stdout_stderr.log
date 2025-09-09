@@ -1,0 +1,534 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (PkgConfig)
+  does not match the name of the calling package (gazebo).  This can lead to
+  problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake:99 (find_package_handle_standard_args)
+  /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:72 (include)
+  CMakeLists.txt:23 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+-- Checking for module 'bullet>=2.82'
+--   Found bullet, version 3.05
+-- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") 
+-- Found assimp: /usr/include (found version "5.2.0") 
+-- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Searching for dependencies of ignition-math6
+-- Looking for OGRE...
+-- OGRE_PREFIX_WATCH changed.
+-- Checking for module 'OGRE'
+--   Found OGRE, version 1.9.0
+-- Found Ogre Ghadamon (1.9.0)
+-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+-- Looking for OGRE_Paging...
+-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+-- Looking for OGRE_Terrain...
+-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+-- Looking for OGRE_Property...
+-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+-- Looking for OGRE_RTShaderSystem...
+-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+-- Looking for OGRE_Volume...
+-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+-- Looking for OGRE_Overlay...
+-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Looking for ignition-transport8 -- found version 8.2.1
+-- Searching for dependencies of ignition-transport8
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") 
+-- Config-file not installed for ZeroMQ -- checking for pkg-config
+-- Checking for module 'libzmq >= 4'
+--   Found libzmq , version 4.3.4
+-- Found ZeroMQ: TRUE (Required is at least version "4") 
+-- Checking for module 'uuid'
+--   Found uuid, version 2.37.2
+-- Found UUID: TRUE  
+-- Looking for ignition-msgs5 -- found version 5.8.1
+-- Searching for dependencies of ignition-msgs5
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 9.0.0
+-- Looking for ignition-msgs5 -- found version 5.8.1
+-- Looking for ignition-common3 -- found version 3.14.0
+-- Searching for dependencies of ignition-common3
+-- Looking for dlfcn.h - found
+-- Looking for libdl - found
+-- Found DL: TRUE  
+-- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") 
+-- Searching for <ignition-common3> component [graphics]
+-- Looking for ignition-common3-graphics -- found version 3.14.0
+-- Searching for dependencies of ignition-common3-graphics
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Looking for ignition-fuel_tools4 -- found version 4.4.0
+-- Searching for dependencies of ignition-fuel_tools4
+-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  
+-- Checking for module 'jsoncpp'
+--   Found jsoncpp, version 1.9.5
+-- Found JSONCPP: TRUE  
+-- Checking for module 'libzip'
+--   Found libzip, version 1.7.3
+-- Found ZIP: TRUE  
+-- Looking for ignition-common3 -- found version 3.14.0
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Looking for ignition-msgs5 -- found version 5.8.1
+-- Found gazebo_ros_pkgs: 3.9.0 (/opt/ros/humble/share/gazebo_ros_pkgs/cmake)
+-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found Threads: TRUE  
+-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found tf2: 0.25.16 (/opt/ros/humble/share/tf2/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/anurag/griffin/build/turtlebot3_gazebo
+[  8%] [32mBuilding CXX object CMakeFiles/obstacle1.dir/src/obstacle1.cpp.o[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/traffic_light_plugin.dir/src/traffic_light_plugin.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/turtlebot3_drive.dir/src/turtlebot3_drive.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/obstacle2.dir/src/obstacle2.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/traffic_bar_plugin.dir/src/traffic_bar_plugin.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/obstacles.dir/src/obstacles.cpp.o[0m
+[ 58%] [32m[1mLinking CXX executable turtlebot3_drive[0m
+[ 66%] [32m[1mLinking CXX shared library libobstacle2.so[0m
+[ 66%] Built target turtlebot3_drive
+[ 75%] [32m[1mLinking CXX shared library libtraffic_light_plugin.so[0m
+[ 75%] Built target obstacle2
+[ 75%] Built target traffic_light_plugin
+[ 83%] [32m[1mLinking CXX shared library libobstacle1.so[0m
+[ 91%] [32m[1mLinking CXX shared library libobstacles.so[0m
+[ 91%] Built target obstacle1
+[ 91%] Built target obstacles
+[100%] [32m[1mLinking CXX shared library libtraffic_bar_plugin.so[0m
+[100%] Built target traffic_bar_plugin
+-- Install configuration: ""
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/lib/turtlebot3_gazebo/turtlebot3_drive
+-- Set runtime path of "/home/anurag/griffin/install/turtlebot3_gazebo/lib/turtlebot3_gazebo/turtlebot3_drive" to ""
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/spawn_turtlebot3.launch.py
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_world.launch.py
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_dqn_stage3.launch.py
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/multi_spawn_turtlebot3.launch.py
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_dqn_stage1.launch.py
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_dqn_stage4.launch.py
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/robot_state_publisher.launch.py
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_dqn_stage2.launch.py
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_autorace_2020.launch.py
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_house.launch.py
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/turtlebot3_office.launch.py
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/multi_robot.launch.py
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//launch/empty_world.launch.py
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/goal_box
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/goal_box/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/goal_box/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/inner_walls
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/inner_walls/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/inner_walls/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacles
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacles/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacles/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle1
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle1/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle1/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle2
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle2/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/obstacle2/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_dqn_world/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle/model-1_4.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/elegant_female
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/elegant_female/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/elegant_female/meshes/elegant_female.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/elegant_female/meshes/elegant_female.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/elegant_female/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/elegant_female/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/elegant_female/materials/textures/eyebrow002.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/elegant_female/materials/textures/eyelashes01.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/elegant_female/materials/textures/shoes03_diffuse.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/elegant_female/materials/textures/male_elegantsuit01_diffuse.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/elegant_female/materials/textures/ponytail01_diffuse.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/elegant_female/materials/textures/brown_eye.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/elegant_female/materials/textures/young_lightskinned_female_diffuse2.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/elegant_female/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/elegant_female/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/WaterDispenser
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/WaterDispenser/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/WaterDispenser/meshes/water_dispenser.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/WaterDispenser/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/WaterDispenser/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/labtop_mac_2
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/labtop_mac_2/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/labtop_mac_2/meshes/body.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/labtop_mac_2/meshes/keys.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/labtop_mac_2/meshes/labtop.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/labtop_mac_2/meshes/screen.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/labtop_mac_2/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/labtop_mac_2/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/labtop_mac_2/materials/scripts/labtop_screen_2.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/labtop_mac_2/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/labtop_mac_2/materials/textures/labtop_screen2.jpg
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/labtop_mac_2/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/labtop_mac_2/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bowl
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bowl/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bowl/meshes/bowl.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bowl/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bowl/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bowl/model-1_2.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bowl/model-1_4.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bowl/model-1_3.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/file_1
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/file_1/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/file_1/meshes/model.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/file_1/meshes/body.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/file_1/meshes/tag.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/file_1/meshes/ring.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/file_1/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/file_1/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_lamp
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_lamp/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_lamp/meshes/office_lamp.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_lamp/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_lamp/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_lamp/materials/textures/office_lamp_diffuse.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_lamp/materials/textures/office_lamp_specular.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_lamp/materials/textures/office_lamp_illumination.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_lamp/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_lamp/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/side_table_1
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/side_table_1/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/side_table_1/meshes/legs.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/side_table_1/meshes/side_table_1.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/side_table_1/meshes/middle.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/side_table_1/meshes/leg.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/side_table_1/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/side_table_1/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/side_table_1/materials/scripts/side_table_1.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/side_table_1/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/side_table_1/materials/textures/brown_light.jpg
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/side_table_1/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/side_table_1/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bookshelf_large
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bookshelf_large/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bookshelf_large/meshes/model.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bookshelf_large/meshes/glass.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bookshelf_large/meshes/frame.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bookshelf_large/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bookshelf_large/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bookshelf_large/materials/scripts/bookshelf.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bookshelf_large/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bookshelf_large/materials/textures/wood_dark_4.jpg
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bookshelf_large/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/bookshelf_large/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/refrigerator
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/refrigerator/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/refrigerator/meshes/refrigerator.obj
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/refrigerator/meshes/refrigerator.mtl
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/refrigerator/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/refrigerator/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/refrigerator/materials/textures/refrigerator.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/refrigerator/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/refrigerator/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/ground_plane
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/ground_plane/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/ground_plane/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/ground_plane/model-1_2.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/ground_plane/model-1_4.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/ground_plane/model-1_3.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/book_10
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/book_10/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/book_10/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/book_10/materials/scripts/book_10.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/book_10/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/book_10/materials/textures/cover10.jpg
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/book_10/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/book_10/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_couch
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_couch/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_couch/meshes/office_couch.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_couch/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_couch/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_couch/materials/textures/office_couch_specular.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_couch/materials/textures/office_couch_diffuse.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_couch/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_couch/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/donut_frost_1
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/donut_frost_1/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/donut_frost_1/meshes/donut2_dust.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/donut_frost_1/meshes/donut2.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/donut_frost_1/meshes/donut2_frost.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/donut_frost_1/meshes/donut2_bread.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/donut_frost_1/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/donut_frost_1/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/toilet
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/toilet/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/toilet/meshes/toilet.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/toilet/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/toilet/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/toilet/materials/textures/toilet_diffuse_specular.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/toilet/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/toilet/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_chair
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_chair/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_chair/meshes/chair_cushion.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_chair/meshes/chair_wheels.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_chair/meshes/office_chair.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_chair/meshes/chair_base.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_chair/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_chair/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_chair/materials/textures/office_chair_diffuse.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_chair/materials/textures/office_chair_specular.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_chair/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_chair/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_desk
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_desk/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_desk/meshes/office_desk.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_desk/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_desk/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_desk/materials/textures/office_desk_specular.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_desk/materials/textures/office_desk_diffuse.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_desk/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/office_desk/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/book_2
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/book_2/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/book_2/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/book_2/materials/scripts/book_2.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/book_2/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/book_2/materials/textures/cover2.jpg
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/book_2/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/book_2/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/coca_cola
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/coca_cola/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/coca_cola/meshes/coke.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/coca_cola/meshes/aluminum.jpg
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/coca_cola/meshes/can_ring_pull_end_centre.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/coca_cola/meshes/coke_uv_map.jpg
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/coca_cola/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/coca_cola/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/coca_cola/materials/scripts/coke.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/coca_cola/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/coca_cola/materials/textures/cokecan.jpg
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/coca_cola/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_office/coca_cola/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/meshes/wall.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/meshes/hexagon.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_world/model-1_4.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/model-1_4.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger/model (copy).sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger_cam
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger_cam/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger_cam/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_burger_cam/model-1_4.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_house
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_house/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_house/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/sensors
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/sensors/astra.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/sensors/lds.stl
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/sensors/r200.jpg
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/sensors/r200.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/sensors/astra.jpg
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/wheels
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/wheels/left_tire.stl
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/wheels/right_tire.stl
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/waffle_base.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/bases
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/bases/waffle_pi_base.stl
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/bases/waffle_base.stl
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/bases/burger_base.stl
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/burger_base.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/waffle_pi_base.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/r200.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/tire.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/meshes/lds.dae
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_common/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_left
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_left/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_left/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_left/materials/scripts/traffic_is_left.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_left/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_left/materials/textures/traffic_left.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_left/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_left/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_tunnel
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_tunnel/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_tunnel/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_tunnel/materials/scripts/tunnel.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_tunnel/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_tunnel/materials/textures/tunnel.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_tunnel/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_tunnel/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/checker
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/checker/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/checker/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/checker/materials/scripts/checker.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/checker/materials/checker.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/checker/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/checker/materials/textures/checker.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/checker/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/checker/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/course
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/course/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/course/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/course/materials/scripts/course.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/course/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/course/materials/textures/course.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/course/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/course/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_pl_left
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_pl_left/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_pl_left/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_pl_left/materials/scripts/traffic_pl_left.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_pl_left/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_pl_left/materials/textures/traffic_pl_left.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_pl_left/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_pl_left/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_parking
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_parking/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_parking/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_parking/materials/scripts/traffic_parking.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_parking/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_parking/materials/textures/traffic_parking.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_parking/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_parking/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_right
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_right/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_right/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_right/materials/scripts/traffic_right.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_right/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_right/materials/textures/traffic_right.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_right/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_right/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_intersection
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_intersection/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_intersection/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_intersection/materials/scripts/traffic_intersection.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_intersection/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_intersection/materials/textures/traffic_intersection.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_intersection/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_intersection/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_construction
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_construction/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_construction/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_construction/materials/scripts/traffic_construction.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_construction/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_construction/materials/textures/traffic_construction.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_construction/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_construction/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_noentry
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_noentry/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_noentry/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_noentry/materials/scripts/traffic_noentry.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_noentry/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_noentry/materials/textures/traffic_noentry.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_noentry/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_noentry/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_light
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_light/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_light/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_light/materials/scripts/traffic_light.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_light/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_light/materials/textures/traffic_light_red.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_light/materials/textures/traffic_light_green.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_light/materials/textures/traffic_light.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_light/materials/textures/traffic_light_yellow.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_light/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_light/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_stop
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_stop/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_stop/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_stop/materials/scripts/traffic_stop.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_stop/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_stop/materials/textures/traffic_stop.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_stop/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_stop/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_bar
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_bar/materials
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_bar/materials/scripts
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_bar/materials/scripts/traffic_bar.material
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_bar/materials/textures
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_bar/materials/textures/traffic_bar.png
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_bar/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_autorace_2020/traffic_bar/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/model.config
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/model-1_4_.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//models/turtlebot3_waffle_pi/model.sdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//rviz
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//rviz/tb3_gazebo.rviz
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//urdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//urdf/turtlebot3_waffle.urdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//urdf/turtlebot3_waffle_pi.urdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//urdf/turtlebot3_burger_cam.urdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//urdf/common_properties.urdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//urdf/turtlebot3_burger.urdf
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/turtlebot3_world.world
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/officelayout2.world
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo//worlds/empty_world.world
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/include/
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/include//turtlebot3_gazebo
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/include//turtlebot3_gazebo/obstacle1.hpp
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/include//turtlebot3_gazebo/obstacles.hpp
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/include//turtlebot3_gazebo/obstacle2.hpp
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/include//turtlebot3_gazebo/traffic_bar_plugin.hpp
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/include//turtlebot3_gazebo/traffic_light_plugin.hpp
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/include//turtlebot3_gazebo/turtlebot3_drive.hpp
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/ament_index/resource_index/package_run_dependencies/turtlebot3_gazebo
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/ament_index/resource_index/parent_prefix_path/turtlebot3_gazebo
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo/environment/ament_prefix_path.sh
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo/environment/ament_prefix_path.dsv
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo/environment/path.sh
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo/environment/path.dsv
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo/local_setup.bash
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo/local_setup.sh
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo/local_setup.zsh
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo/local_setup.dsv
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.dsv
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/ament_index/resource_index/packages/turtlebot3_gazebo
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo/cmake/turtlebot3_gazeboConfig.cmake
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo/cmake/turtlebot3_gazeboConfig-version.cmake
+-- Installing: /home/anurag/griffin/install/turtlebot3_gazebo/share/turtlebot3_gazebo/package.xml

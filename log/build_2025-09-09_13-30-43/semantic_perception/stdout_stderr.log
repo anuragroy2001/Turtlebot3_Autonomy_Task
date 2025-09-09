@@ -1,0 +1,40 @@
+running egg_info
+creating ../../build/semantic_perception/semantic_perception.egg-info
+writing ../../build/semantic_perception/semantic_perception.egg-info/PKG-INFO
+writing dependency_links to ../../build/semantic_perception/semantic_perception.egg-info/dependency_links.txt
+writing entry points to ../../build/semantic_perception/semantic_perception.egg-info/entry_points.txt
+writing requirements to ../../build/semantic_perception/semantic_perception.egg-info/requires.txt
+writing top-level names to ../../build/semantic_perception/semantic_perception.egg-info/top_level.txt
+writing manifest file '../../build/semantic_perception/semantic_perception.egg-info/SOURCES.txt'
+reading manifest file '../../build/semantic_perception/semantic_perception.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/semantic_perception/semantic_perception.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/anurag/griffin/build/semantic_perception/build
+creating /home/anurag/griffin/build/semantic_perception/build/lib
+creating /home/anurag/griffin/build/semantic_perception/build/lib/semantic_perception
+copying semantic_perception/semantic_perception_new.py -> /home/anurag/griffin/build/semantic_perception/build/lib/semantic_perception
+copying semantic_perception/semantic_perception.py -> /home/anurag/griffin/build/semantic_perception/build/lib/semantic_perception
+copying semantic_perception/__init__.py -> /home/anurag/griffin/build/semantic_perception/build/lib/semantic_perception
+running install
+running install_lib
+creating /home/anurag/griffin/install/semantic_perception/lib/python3.10/site-packages/semantic_perception
+copying /home/anurag/griffin/build/semantic_perception/build/lib/semantic_perception/semantic_perception_new.py -> /home/anurag/griffin/install/semantic_perception/lib/python3.10/site-packages/semantic_perception
+copying /home/anurag/griffin/build/semantic_perception/build/lib/semantic_perception/semantic_perception.py -> /home/anurag/griffin/install/semantic_perception/lib/python3.10/site-packages/semantic_perception
+copying /home/anurag/griffin/build/semantic_perception/build/lib/semantic_perception/__init__.py -> /home/anurag/griffin/install/semantic_perception/lib/python3.10/site-packages/semantic_perception
+byte-compiling /home/anurag/griffin/install/semantic_perception/lib/python3.10/site-packages/semantic_perception/semantic_perception_new.py to semantic_perception_new.cpython-310.pyc
+byte-compiling /home/anurag/griffin/install/semantic_perception/lib/python3.10/site-packages/semantic_perception/semantic_perception.py to semantic_perception.cpython-310.pyc
+byte-compiling /home/anurag/griffin/install/semantic_perception/lib/python3.10/site-packages/semantic_perception/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/anurag/griffin/install/semantic_perception/share/ament_index
+creating /home/anurag/griffin/install/semantic_perception/share/ament_index/resource_index
+creating /home/anurag/griffin/install/semantic_perception/share/ament_index/resource_index/packages
+copying resource/semantic_perception -> /home/anurag/griffin/install/semantic_perception/share/ament_index/resource_index/packages
+copying package.xml -> /home/anurag/griffin/install/semantic_perception/share/semantic_perception
+running install_egg_info
+Copying ../../build/semantic_perception/semantic_perception.egg-info to /home/anurag/griffin/install/semantic_perception/lib/python3.10/site-packages/semantic_perception-0.0.0-py3.10.egg-info
+running install_scripts
+Installing semantic_perception script to /home/anurag/griffin/install/semantic_perception/lib/semantic_perception
+Installing semantic_perception_new script to /home/anurag/griffin/install/semantic_perception/lib/semantic_perception
+writing list of installed files to '/home/anurag/griffin/build/semantic_perception/install.log'

@@ -1,0 +1,3 @@
+[console_scripts]
+semantic_nav = semantic_navigation.semantic_nav:main
+

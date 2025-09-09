@@ -1,0 +1,9 @@
+# OpenAI Vision API for semantic understanding
+openai>=1.0.0
+
+# YOLO for object detection
+ultralytics>=8.0.0
+
+# Additional dependencies for enhanced semantic perception
+scikit-learn>=1.0.0
+Pillow>=8.0.0

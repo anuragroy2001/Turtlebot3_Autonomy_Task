@@ -1,0 +1,22 @@
+[0.685s] Invoking command in '/home/anurag/griffin/src/semantic_navigation': PYTHONPATH=/home/anurag/griffin/build/semantic_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/anurag/griffin/install/semantic_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/semantic_navigation build --build-base /home/anurag/griffin/build/semantic_navigation/build install --record /home/anurag/griffin/build/semantic_navigation/install.log --single-version-externally-managed install_data
+[0.857s] running egg_info
+[0.857s] writing ../../build/semantic_navigation/semantic_navigation.egg-info/PKG-INFO
+[0.857s] writing dependency_links to ../../build/semantic_navigation/semantic_navigation.egg-info/dependency_links.txt
+[0.857s] writing entry points to ../../build/semantic_navigation/semantic_navigation.egg-info/entry_points.txt
+[0.857s] writing requirements to ../../build/semantic_navigation/semantic_navigation.egg-info/requires.txt
+[0.858s] writing top-level names to ../../build/semantic_navigation/semantic_navigation.egg-info/top_level.txt
+[0.858s] reading manifest file '../../build/semantic_navigation/semantic_navigation.egg-info/SOURCES.txt'
+[0.859s] adding license file 'LICENSE'
+[0.859s] writing manifest file '../../build/semantic_navigation/semantic_navigation.egg-info/SOURCES.txt'
+[0.859s] running build
+[0.859s] running build_py
+[0.859s] running install
+[0.860s] running install_lib
+[0.860s] running install_data
+[0.861s] running install_egg_info
+[0.862s] removing '/home/anurag/griffin/install/semantic_navigation/lib/python3.10/site-packages/semantic_navigation-0.0.0-py3.10.egg-info' (and everything under it)
+[0.862s] Copying ../../build/semantic_navigation/semantic_navigation.egg-info to /home/anurag/griffin/install/semantic_navigation/lib/python3.10/site-packages/semantic_navigation-0.0.0-py3.10.egg-info
+[0.862s] running install_scripts
+[0.878s] Installing semantic_nav script to /home/anurag/griffin/install/semantic_navigation/lib/semantic_navigation
+[0.878s] writing list of installed files to '/home/anurag/griffin/build/semantic_navigation/install.log'
+[0.895s] Invoked command in '/home/anurag/griffin/src/semantic_navigation' returned '0': PYTHONPATH=/home/anurag/griffin/build/semantic_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/anurag/griffin/install/semantic_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/semantic_navigation build --build-base /home/anurag/griffin/build/semantic_navigation/build install --record /home/anurag/griffin/build/semantic_navigation/install.log --single-version-externally-managed install_data

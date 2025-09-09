@@ -1,0 +1,4 @@
+[console_scripts]
+semantic_perception = semantic_perception.semantic_perception:main
+semantic_perception_new = semantic_perception.semantic_perception_new:main
+
