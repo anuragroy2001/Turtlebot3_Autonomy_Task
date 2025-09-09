@@ -1,0 +1,19 @@
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.crt
+*.credentials
+config.yaml
+secrets*.json
+
+# Python / ROS2
+__pycache__/
+*.py[cod]
+.venv/ venv/ .envrc
+build/
+install/
+log/
+.colcon/
