@@ -43,7 +43,7 @@ This project demonstrates advanced robotic navigation through three integrated c
 
 ```bash
 # Create workspace directory
-mkdir -p ~/griffin/src && cd ~/griffin/src
+mkdir -p ~/Turtlebot3_Autonomy_Task/src && cd ~/Turtlebot3_Autonomy_Task/src
 
 # Ensure you have all required packages:
 # - semantic_perception (YOLO12 + OpenAI Vision)
@@ -57,7 +57,7 @@ mkdir -p ~/griffin/src && cd ~/griffin/src
 
 #### Python Dependencies
 ```bash
-cd ~/griffin/src
+cd ~/Turtlebot3_Autonomy_Task/src
 pip install -r requirements.txt
 ```
 
@@ -88,23 +88,23 @@ Choose one method to make office models available to Gazebo:
 #### Method A: Environment Variable (Recommended)
 ```bash
 # Temporary (current session)
-export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/griffin/src/turtlebot3_simulations/turtlebot3_gazebo/models
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/Turtlebot3_Autonomy_Task/src/turtlebot3_simulations/turtlebot3_gazebo/models
 
 # Permanent (add to ~/.bashrc)
-echo 'export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/griffin/src/turtlebot3_simulations/turtlebot3_gazebo/models' >> ~/.bashrc
+echo 'export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/Turtlebot3_Autonomy_Task/src/turtlebot3_simulations/turtlebot3_gazebo/models' >> ~/.bashrc
 source ~/.bashrc
 ```
 
 #### Method B: Direct Copy (Alternative)
 ```bash
 mkdir -p ~/.gazebo/models/
-cp -r ~/griffin/src/turtlebot3_simulations/turtlebot3_gazebo/models/turtlebot3_office/* ~/.gazebo/models/
+cp -r ~/Turtlebot3_Autonomy_Task/src/turtlebot3_simulations/turtlebot3_gazebo/models/turtlebot3_office/* ~/.gazebo/models/
 ```
 
 ### 4. Build Workspace
 
 ```bash
-cd ~/griffin
+cd ~/Turtlebot3_Autonomy_Task
 colcon build --symlink-install
 source /opt/ros/humble/setup.bash
 source install/setup.bash
@@ -120,7 +120,7 @@ source install/setup.bash
 
 #### Launch Simulation Environment
 ```bash
-cd ~/griffin
+cd ~/Turtlebot3_Autonomy_Task
 export TURTLEBOT3_MODEL=burger
 source install/setup.bash
 
@@ -154,7 +154,7 @@ https://github.com/user-attachments/assets/c6928ba0-049b-43c7-96e7-5e10fc9fae0d
 #### Save Generated Map
 ```bash
 # Once exploration completes
-ros2 run nav2_map_server map_saver_cli -f ~/griffin/maps/office_map_test
+ros2 run nav2_map_server map_saver_cli -f ~/Turtlebot3_Autonomy_Task/maps/office_map_test
 ```
 
 **Features**:
@@ -170,9 +170,9 @@ ros2 run nav2_map_server map_saver_cli -f ~/griffin/maps/office_map_test
 
 #### Setup Navigation with Custom Planner
 ```bash
-cd ~/griffin
+cd ~/Turtlebot3_Autonomy_Task
 export TURTLEBOT3_MODEL=burger
-export MY_MAP=~/griffin/maps/office_map2.yaml
+export MY_MAP=~/Turtlebot3_Autonomy_Task/maps/office_map2.yaml
 
 source install/setup.bash
 
@@ -184,7 +184,7 @@ ros2 launch turtlebot3_gazebo turtlebot3_office.launch.py \
 # Navigation with RRT* planner
 ros2 launch nav2_bringup navigation_launch.py \
     use_sim_time:=True \
-    params_file:=$HOME/griffin/src/TurtleBot-RRT-Star/nav2_params.yaml \
+    params_file:=$HOME/Turtlebot3_Autonomy_Task/src/TurtleBot-RRT-Star/nav2_params.yaml \
     map:=$MY_MAP 
 
 # Localization
@@ -221,7 +221,7 @@ https://github.com/user-attachments/assets/2003e0bc-2b82-4b31-bcfe-2ddc07e98714
 #### Launch Environment for Semantic Mapping
 ```bash
 export TURTLEBOT3_MODEL=burger
-source ~/griffin/install/setup.bash
+source ~/Turtlebot3_Autonomy_Task/install/setup.bash
 
 # Start simulation environment
 ros2 launch turtlebot3_gazebo turtlebot3_office.launch.py \
@@ -242,7 +242,7 @@ ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_vie
 
 #### Start Semantic Perception System
 ```bash
-source ~/griffin/install/setup.bash
+source ~/Turtlebot3_Autonomy_Task/install/setup.bash
 ros2 run semantic_perception semantic_perception_new
 ```
 
@@ -256,7 +256,7 @@ rqt_image_view
 # Select topic: /percep/annotated_image
 
 # Monitor semantic memory updates
-watch -n 1 "ls -la ~/griffin/config/"
+watch -n 1 "ls -la ~/Turtlebot3_Autonomy_Task/config/"
 ```
 
 **Objected detected by YOLO and object labelling, scene understanding done by OpenAI**
@@ -285,7 +285,7 @@ https://github.com/user-attachments/assets/af3816c6-c596-4c95-9822-1a382f3f10e4
 
 #### Prepare Navigation Environment
 ```bash
-source ~/griffin/install/setup.bash
+source ~/Turtlebot3_Autonomy_Task/install/setup.bash
 
 # Launch simulation
 ros2 launch turtlebot3_gazebo turtlebot3_office.launch.py \
@@ -308,7 +308,7 @@ ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_vie
 
 #### Start Semantic Navigation Interface
 ```bash
-source ~/griffin/install/setup.bash
+source ~/Turtlebot3_Autonomy_Task/install/setup.bash
 ros2 run semantic_navigation semantic_nav
 ```
 
@@ -337,7 +337,7 @@ Where do you want to go?
 
 ### Semantic Memory Structure
 
-The system creates hierarchical semantic understanding stored in `~/griffin/config/semantic_exploration_memory_*.json`:
+The system creates hierarchical semantic understanding stored in `~/Turtlebot3_Autonomy_Task/config/semantic_exploration_memory_*.json`:
 
 ```json
 {
@@ -455,7 +455,7 @@ response_format = {
 ### Package Organization
 
 ```
-griffin/                            # Main workspace directory
+Turtlebot3_Autonomy_Task/                            # Main workspace directory
 ├── src/                            # ROS2 source packages
 │   ├── semantic_perception/        # Vision-Language perception system
 │   ├── semantic_navigation/        # Natural language navigation
