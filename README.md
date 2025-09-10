@@ -10,7 +10,11 @@ This project demonstrates advanced robotic navigation through three integrated c
 2. **RRT* Path Planning** - Custom optimal path generation algorithm  
 3. **Semantic Navigation** - Natural language-driven navigation using YOLO12 + OpenAI Vision API
 
+**World View 1**
+
 <img width="2167" height="1300" alt="worldview1" src="https://github.com/user-attachments/assets/0fa12c28-fb1f-4c63-b533-20748a0e4a64" />
+
+**World View 2**
 
 <img width="2167" height="1300" alt="worldview2" src="https://github.com/user-attachments/assets/fdc9d408-69a8-4811-b033-d0a0a712a097" />
 
@@ -72,7 +76,7 @@ sudo apt update && sudo apt install -y \
 # Set OpenAI API key (required for semantic understanding)
 export OPENAI_API_KEY="your-api-key-here"
 
-# Make permanent (recommended)
+# Make permanent
 echo 'export OPENAI_API_KEY="your-api-key-here"' >> ~/.bashrc
 source ~/.bashrc
 ```
@@ -147,7 +151,6 @@ source install/setup.bash
 ros2 launch explore_lite explore.launch.py
 ```
 
-
 https://github.com/user-attachments/assets/c6928ba0-049b-43c7-96e7-5e10fc9fae0d
 
 
@@ -158,16 +161,15 @@ ros2 run nav2_map_server map_saver_cli -f ~/griffin/office_map
 ```
 
 **Features**:
-- ✅ Frontier-based exploration algorithm
-- ✅ Real-time SLAM mapping
-- ✅ Tuned exploration parameters for thorough coverage
-- ✅ RViz visualization of exploration progress
+- Frontier-based exploration algorithm
+- Real-time SLAM mapping
+- Tuned exploration parameters for thorough coverage
 
 ---
 
 ### Task 2: RRT* Path Planning
 
-**Objective**: Demonstrate RRT* implementation for optimal path generation.
+**Objective**: Demonstrate RRT* implementation as a global planner for path generation.
 
 #### Setup Navigation with Custom Planner
 ```bash
@@ -199,7 +201,7 @@ ros2 launch nav2_bringup localization_launch.py \
 ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz
 ```
 
-#### Interactive Navigation
+#### What to do
 1. **Set Initial Pose**: Use "2D Pose Estimate" in RViz to localize robot
 2. **Set Goal**: Use "Nav2 Goal" tool to select destination
 3. **Observe**: RRT* algorithm generates optimal path in real-time
@@ -208,12 +210,12 @@ ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_vie
 https://github.com/user-attachments/assets/2003e0bc-2b82-4b31-bcfe-2ddc07e98714
 
 
-**RRT* Algorithm Features**:
-- ✅ Asymptotic optimality (converges to optimal solution)
-- ✅ Dynamic rewiring for path improvement
-- ✅ Ball-radius optimization for efficient exploration
-- ✅ Obstacle avoidance with collision checking
-- ✅ Smooth path interpolation
+**About the RRT* Algorithm**:
+- Asymptotic optimality (converges to optimal solution)
+- Dynamic rewiring for path improvement
+- Ball-radius optimization for efficient exploration
+- Obstacle avoidance with collision checking
+- Smooth path interpolation
 
 ---
 
@@ -261,16 +263,20 @@ rqt_image_view
 # Monitor semantic memory updates
 watch -n 1 "ls -la ~/griffin/config/"
 ```
+
+**Objected detected by YOLO and object labelling, scene understanding done by OpenAI**
 <img width="409" height="307" alt="percpetion_label" src="https://github.com/user-attachments/assets/f988fcbb-02ad-4b9e-b5f2-aad74edc0ce9" />
+
+**Added depth threshold of 3.0m such that detection and labelling is done when nearby objects and not in empty space, while also avoiding calling the OpenAI api continously**
 <img width="945" height="441" alt="perception_terminal" src="https://github.com/user-attachments/assets/0df94a94-bb92-48b8-b5b9-c21b03c42455" />
 
 **System Capabilities**:
-- ✅ **YOLO12**: Fast, accurate object bounding boxes
-- ✅ **OpenAI Vision API**: Rich semantic understanding and scene classification  
-- ✅ **3D Positioning**: RGB-D integration for spatial object mapping
-- ✅ **Scene Understanding**: Room type classification (office, break room, bathroom)
-- ✅ **Semantic Memory**: JSON-based object and scene database
-- ✅ **Real-time Visualization**: Annotated image stream with confidence scores
+- **YOLO12**: Fast, accurate object bounding boxes
+- **OpenAI Vision API**: Semantic understanding and scene classification  
+- **3D Positioning**: RGB-D integration for spatial object mapping
+- **Scene Understanding**: Room type classification (office, break room, bathroom)
+- **Semantic Memory**: JSON-based object and scene database
+- **Visualization**: Annotated image stream with confidence scores
 
 
 https://github.com/user-attachments/assets/af3816c6-c596-4c95-9822-1a382f3f10e4
@@ -323,40 +329,85 @@ Where do you want to go?
 ```
 
 **Navigation Features**:
-- ✅ **Natural Language Understanding**: OpenAI-powered query interpretation
-- ✅ **Object-based Navigation**: Navigate to specific detected objects
-- ✅ **Scene-based Navigation**: Navigate to room types or areas
-- ✅ **Semantic Matching**: Intelligent mapping of queries to known locations
-- ✅ **Confidence Scoring**: Quality assessment of navigation targets
-- ✅ **Real-time Feedback**: Navigation progress and completion status
+- **Natural Language Understanding**: OpenAI-powered query interpretation
+- **Object-based Navigation**: Navigate to specific detected objects
+- **Scene-based Navigation**: Navigate to room types or areas
+- **Semantic Matching**: Intelligent mapping of queries to known locations
 
-[![Watch the video](resources/worldview1.png)](https://www.youtube.com/watch?v=naMtXU2QUeY)
+[![Watch the video](resources/navigationpic.png)](https://www.youtube.com/watch?v=naMtXU2QUeY)
 ---
 
 ## System Architecture Details
 
 ### Semantic Memory Structure
 
-The system creates hierarchical semantic understanding stored in `~/griffin/config/`:
+The system creates hierarchical semantic understanding stored in `~/griffin/config/semantic_exploration_memory_*.json`:
 
 ```json
 {
   "objects": {
     "desk": {
-      "positions": [...],
-      "confidences": [...], 
-      "best_position": {"x": 2.1, "y": 0.5, "z": 0.8}
+      "positions": [
+        {"x": -4.290722597182318, "y": 4.020722006496828, "z": 0.5363367397245207},
+        {"x": 1.2533783566743029, "y": 4.446467848692503, "z": 0.5078012384617328}
+      ],
+      "confidences": [0.31530261039733887, 0.32054540514945984],
+      "timestamps": ["2025-09-09T02:45:00.081581", "2025-09-09T02:48:16.697983"],
+      "highest_confidence": 0.32054540514945984,
+      "best_position": {"x": 1.2533783566743029, "y": 4.446467848692503, "z": 0.5078012384617328}
+    },
+    "toilet": {
+      "positions": [
+        {"x": -4.5540686190646475, "y": -5.318418133166253, "z": 0.3767251727878963}
+      ],
+      "confidences": [0.6012506484985352],
+      "timestamps": ["2025-09-09T02:46:18.717737"],
+      "highest_confidence": 0.6012506484985352,
+      "best_position": {"x": -4.5540686190646475, "y": -5.318418133166253, "z": 0.3767251727878963}
     }
   },
   "scenes": {
     "main office room": {
-      "unique_objects": ["desk", "chair", "bookshelf"],
-      "object_count": 3,
-      "best_position": {"x": 1.8, "y": 0.2, "z": 0.5}
+      "unique_objects": ["desk"],
+      "object_count": 1,
+      "confidences": [0.9, 0.9, 0.9],
+      "timestamps": ["2025-09-09T02:44:49.053022", "2025-09-09T02:45:00.082508"],
+      "highest_confidence": 0.9,
+      "best_position": {"x": 1.670416908220802, "y": -0.697140892197236, "z": 0.403020038752547}
+    },
+    "bathroom": {
+      "unique_objects": ["toilet"],
+      "object_count": 1,
+      "confidences": [0.9, 0.9, 0.9, 0.9, 0.9],
+      "timestamps": ["2025-09-09T02:46:18.718582", "2025-09-09T02:46:22.300131"],
+      "highest_confidence": 0.9,
+      "best_position": {"x": -4.5540686190646475, "y": -5.318418133166253, "z": 0.3767251727878963}
+    },
+    "break room": {
+      "unique_objects": ["refrigerator"],
+      "object_count": 1,
+      "confidences": [0.9, 0.9, 0.9],
+      "timestamps": ["2025-09-09T02:45:11.104400", "2025-09-09T02:45:14.301241"],
+      "highest_confidence": 0.9,
+      "best_position": {"x": -4.120816425208103, "y": 0.2782392357478172, "z": 0.664629745993223}
     }
+  },
+  "exploration_path": [],
+  "session_info": {
+    "start_time": "2025-09-09T02:44:25.564805",
+    "file_number": "8",
+    "node_version": "3.0_scene_center_computed",
+    "structure": "objects_and_scenes_with_computed_centers"
   }
 }
 ```
+
+**Memory System:**
+
+- **Multiple Detections**: Each object stores all detection instances with positions, confidences, and timestamps
+- **Best Position Selection**: Automatically selects the highest confidence detection as the canonical location
+- **Scene Classification**: Automatically infers room types (office, bathroom, break room) based on detected objects
+- **Confidence Scoring**: YOLO detection confidence combined with OpenAI Vision API classification scores
 
 ### Package Organization
 
@@ -373,54 +424,6 @@ griffin/
 ├── build/                          # Compilation artifacts  
 └── install/                        # ROS2 installation
 ```
-
-### Data Flow
-
-1. **Exploration Phase**: Robot autonomously maps environment using SLAM
-2. **Semantic Perception**: YOLO12 + OpenAI identify and classify objects/scenes
-3. **Memory Building**: 3D positions and semantic labels stored in JSON database
-4. **Query Processing**: Natural language converted to navigation goals via OpenAI
-5. **Path Planning**: RRT* generates optimal routes to semantic targets
-6. **Navigation Execution**: Robot navigates to requested semantic locations
-
----
-
-## Troubleshooting
-
-### Common Issues
-
-**Gazebo Won't Start**
-```bash
-# Kill existing processes
-pkill -f gazebo && sleep 3
-# Retry launch
-```
-
-**Missing Office Models**
-```bash
-# Verify model path is set
-echo $GAZEBO_MODEL_PATH
-# Should include: .../turtlebot3_simulations/turtlebot3_gazebo/models
-```
-
-**OpenAI API Errors**
-```bash
-# Verify API key
-echo $OPENAI_API_KEY
-# Should show your API key, not empty
-```
-
-**Empty Semantic Memory**
-- Ensure robot is moving during perception phase
-- Check `/percep/annotated_image` topic for detection visualization
-- Verify office models are loaded (furniture should be visible in Gazebo)
-
-### Performance Optimization
-
-- **Exploration Speed**: Adjust `planner_frequency` in `m-explore-ros2/explore/config/params.yaml`
-- **Detection Rate**: Modify `processing_interval` in semantic perception node
-- **OpenAI Costs**: Reduce image processing frequency or detail level
-
 ---
 
 ## References & Acknowledgments

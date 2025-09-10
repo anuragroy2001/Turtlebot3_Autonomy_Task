@@ -1,4 +1,4 @@
-# Setup Instructions for VLM-based Semantic Navigation ROS2
+# HOW TO RUN
 
 ## 1. Create the workspace and setup
 
@@ -10,22 +10,30 @@ mkdir -p ~/griffin/src/ && cd ~/griffin/src/
 ```
 
 
-## 2. Install Gazebo, Navigation2, TurtleBot3 Simulation, and SLAM Toolbox
-
-
+## 2. Install the required dependencies and packages
 
 ```bash
-sudo apt update
+cd ~/griffin/src/
+pip install -r requirements.txt
+```
 
+```bash
 sudo apt install ros-humble-navigation2
 sudo apt install ros-humble-nav2-bringup
 sudo apt install ros-humble-turtlebot3-gazebo
 sudo apt install ros-humble-slam-toolbox
 sudo apt install gazebo libgazebo-dev
 ```
+**Note**: Make sure you have your OpenAI API key set:
+```bash
+export OPENAI_API_KEY="your-api-key-here"
+# Or add to ~/.bashrc for persistence
+echo 'export OPENAI_API_KEY="your-api-key-here"' >> ~/.bashrc
+source ~/.bashrc
+```
 
 
-## 3. Build gazebo office world with required models:
+## 3. Add the office models into Gazebo
 
 ### Option A: Set Gazebo Model Path (Recommended)
 
@@ -45,24 +53,7 @@ mkdir -p ~/.gazebo/models/
 cp -r ~/griffin/src/turtlebot3_simulations/turtlebot3_gazebo/models/turtlebot3_office/* ~/.gazebo/models/
 ```
 
-## 4. Install dependencies for VLM-based perception and navigation
-
-```bash
-cd ~/griffin/src/
-pip install -r requirements.txt
-```
-
-**Note**: Make sure you have your OpenAI API key set:
-```bash
-export OPENAI_API_KEY="your-api-key-here"
-# Or add to ~/.bashrc for persistence
-echo 'export OPENAI_API_KEY="your-api-key-here"' >> ~/.bashrc
-source ~/.bashrc
-```
-
-
-
-## 5. Build the package
+## 4. Build it
 
 ```bash
 cd ~/griffin
