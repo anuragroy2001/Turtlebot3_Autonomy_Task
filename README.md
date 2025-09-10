@@ -7,7 +7,7 @@ A comprehensive ROS2 implementation featuring autonomous exploration, custom RRT
 This project demonstrates advanced robotic navigation through three integrated components:
 
 1. **Autonomous Exploration & Mapping** - SLAM-based environment discovery
-2. **RRT* Path Planning** - Custom optimal path generation algorithm  
+2. **RRTStar Path Planning** - Custom optimal path generation algorithm  
 3. **Semantic Navigation** - Natural language-driven navigation using YOLO12 + OpenAI Vision API
 
 **World View 1**
@@ -127,18 +127,15 @@ source install/setup.bash
 # Start Gazebo office world
 ros2 launch turtlebot3_gazebo turtlebot3_office.launch.py \
     x_pose:=0.0 y_pose:=0.0 \
-    use_sim_time:=true \
-    use_rviz:=false \
-    headless:=true &
+    use_sim_time:=true 
 
 # Launch navigation stack
 ros2 launch nav2_bringup navigation_launch.py \
-    use_sim_time:=True \
-    headless:=False &
+    use_sim_time:=True 
 
 # Start SLAM mapping
 ros2 launch slam_toolbox online_async_launch.py \
-    use_sim_time:=True &
+    use_sim_time:=True 
 
 # Open RViz for visualization
 ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz
@@ -157,7 +154,7 @@ https://github.com/user-attachments/assets/c6928ba0-049b-43c7-96e7-5e10fc9fae0d
 #### Save Generated Map
 ```bash
 # Once exploration completes
-ros2 run nav2_map_server map_saver_cli -f ~/griffin/office_map
+ros2 run nav2_map_server map_saver_cli -f ~/griffin/maps/office_map_test
 ```
 
 **Features**:
@@ -175,27 +172,25 @@ ros2 run nav2_map_server map_saver_cli -f ~/griffin/office_map
 ```bash
 cd ~/griffin
 export TURTLEBOT3_MODEL=burger
-export NAV2_MAP_PATH=~/griffin/src/turtlebot3_simulations/turtlebot3_gazebo/map/office_map.yaml
+export MY_MAP=~/griffin/maps/office_map2.yaml
 
 source install/setup.bash
 
 # Launch simulation
 ros2 launch turtlebot3_gazebo turtlebot3_office.launch.py \
     x_pose:=0.0 y_pose:=0.0 \
-    use_sim_time:=true \
-    use_rviz:=false \
-    headless:=true &
+    use_sim_time:=true
 
 # Navigation with RRT* planner
 ros2 launch nav2_bringup navigation_launch.py \
     use_sim_time:=True \
-    params_file:=~/griffin/src/TurtleBot-RRT-Star/nav2_params.yaml \
-    map:=$NAV2_MAP_PATH &
+    params_file:=$HOME/griffin/src/TurtleBot-RRT-Star/nav2_params.yaml \
+    map:=$MY_MAP 
 
 # Localization
 ros2 launch nav2_bringup localization_launch.py \
     use_sim_time:=true \
-    map:=$NAV2_MAP_PATH &
+    map:=$MY_MAP
 
 # Visualization
 ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz
@@ -231,14 +226,11 @@ source ~/griffin/install/setup.bash
 # Start simulation environment
 ros2 launch turtlebot3_gazebo turtlebot3_office.launch.py \
     x_pose:=0.0 y_pose:=0.0 \
-    use_sim_time:=true \
-    use_rviz:=false \
-    headless:=true &
+    use_sim_time:=true 
 
 # Navigation for movement
 ros2 launch nav2_bringup navigation_launch.py \
-    use_sim_time:=True \
-    headless:=False &
+    use_sim_time:=True 
 
 # SLAM for mapping
 ros2 launch slam_toolbox online_async_launch.py \
@@ -253,6 +245,9 @@ ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_vie
 source ~/griffin/install/setup.bash
 ros2 run semantic_perception semantic_perception_new
 ```
+
+- You can either set Nav2 goals yourself to explore to area and collect object and scene data, or run the Exploration package in Task 1 to do it autonomously. 
+- Save the map just as we did in Task 1 after exploration
 
 #### Monitor Detection Results
 ```bash
@@ -295,19 +290,17 @@ source ~/griffin/install/setup.bash
 # Launch simulation
 ros2 launch turtlebot3_gazebo turtlebot3_office.launch.py \
     x_pose:=0.0 y_pose:=0.0 \
-    use_sim_time:=true \
-    use_rviz:=false \
-    headless:=true &
+    use_sim_time:=true 
 
 # Navigation stack (requires existing map)
 ros2 launch nav2_bringup navigation_launch.py \
     use_sim_time:=True \
-    map:=$NAV2_MAP_PATH &
+    map:=$MY_MAP &
 
 # Localization
 ros2 launch nav2_bringup localization_launch.py \
     use_sim_time:=true \
-    map:=$NAV2_MAP_PATH &
+    map:=$MY_MAP &
 
 # Visualization
 ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz
@@ -334,6 +327,9 @@ Where do you want to go?
 - **Scene-based Navigation**: Navigate to room types or areas
 - **Semantic Matching**: Intelligent mapping of queries to known locations
 
+
+## Click below for the Navigation Video in Youtube (due to size constraints)
+
 [![Watch the video](resources/navigationpic.png)](https://www.youtube.com/watch?v=naMtXU2QUeY)
 ---
 
@@ -355,6 +351,15 @@ The system creates hierarchical semantic understanding stored in `~/griffin/conf
       "timestamps": ["2025-09-09T02:45:00.081581", "2025-09-09T02:48:16.697983"],
       "highest_confidence": 0.32054540514945984,
       "best_position": {"x": 1.2533783566743029, "y": 4.446467848692503, "z": 0.5078012384617328}
+    },
+    "refrigerator": {
+      "positions": [
+        {"x": -3.9494348189942228, "y": 0.44690387819409066, "z": 0.6117854082759361}
+      ],
+      "confidences": [0.806982159614563],
+      "timestamps": ["2025-09-09T02:45:14.300364"],
+      "highest_confidence": 0.806982159614563,
+      "best_position": {"x": -3.9494348189942228, "y": 0.44690387819409066, "z": 0.6117854082759361}
     },
     "toilet": {
       "positions": [
@@ -402,29 +407,69 @@ The system creates hierarchical semantic understanding stored in `~/griffin/conf
 }
 ```
 
+### Vision-Language Model Integration
+
+**Models Used:**
+- **YOLO12n** (`yolo12n.pt`): Fast object detection for precise bounding box generation
+- **OpenAI GPT-4o-mini**: Vision-language model for semantic understanding and object labeling
+- **Hybrid Processing**: YOLO provides spatial accuracy, OpenAI provides semantic intelligence
+
+**Prompt Engineering Strategy:**
+
+The system uses carefully crafted prompts for robust scene understanding:
+
+```python
+# 1. Structured Scene Classification
+ROOM_TYPES = ["main office room", "break room", "bathroom"]
+
+# 2. Contextual Object Labeling 
+# - YOLO bounding boxes → OpenAI semantic labels
+# - Spatial context: "Box 0: [x1, y1, x2, y2] (confidence: 0.85)"
+
+# 3. Confidence-based Filtering
+# - Scene confidence threshold: 0.3
+# - YOLO detection threshold: 0.25
+# - Depth filtering: 3.0m max distance
+
+# 4. JSON Response Format Enforcement
+response_format = {
+    "scene_type": "main office room|break room|bathroom",
+    "yolo_objects": [
+        {"bbox_id": 0, "label": "object_name", "description": "detailed description"}
+    ],
+    "spatial_layout": "room layout description",
+    "confidence": 0.9
+}
+```
+
 **Memory System:**
 
-- **Multiple Detections**: Each object stores all detection instances with positions, confidences, and timestamps
-- **Best Position Selection**: Automatically selects the highest confidence detection as the canonical location
-- **Scene Classification**: Automatically infers room types (office, bathroom, break room) based on detected objects
-- **Confidence Scoring**: YOLO detection confidence combined with OpenAI Vision API classification scores
+- **Multi-Detection Storage**: Each object accumulates multiple observations with full temporal history
+- **Best Position Selection**: Automatically selects highest confidence detection as canonical location  
+- **Scene Classification**: Room-level semantic understanding (office, bathroom, break room)
+- **Computed Scene Centers**: Centroids calculated from unique object positions
+- **Real-time Updates**: Continuous semantic memory updates during exploration
+
+### Package Organization
 
 ### Package Organization
 
 ```
-griffin/
-├── src/
-│   ├── semantic_perception/        # YOLO12 + OpenAI perception
+griffin/                            # Main workspace directory
+├── src/                            # ROS2 source packages
+│   ├── semantic_perception/        # Vision-Language perception system
 │   ├── semantic_navigation/        # Natural language navigation
-│   ├── TurtleBot-RRT-Star/         # Custom RRT* implementation
-│   ├── m-explore-ros2/             # Frontier exploration
-│   ├── turtlebot3_simulations/     # Gazebo environments
-│   └── requirements.txt            # Python dependencies
-├── config/                         # Generated semantic memory
-├── build/                          # Compilation artifacts  
-└── install/                        # ROS2 installation
+│   ├── TurtleBot-RRT-Star/         # Custom RRT* path planner
+│   ├── m-explore-ros2/             # Autonomous frontier exploration
+│   ├── turtlebot3_simulations/     # Gazebo simulation environments
+│   └── requirements.txt            # Python ML/Vision dependencies
+├── config/                         # Generated semantic memory files
+├── maps/                           # Saved SLAM maps
+├── build/                          # ROS2 compilation artifacts
+├── install/                        # ROS2 installation directory
+├── log/                            # ROS2 runtime logs
+└── resources/                      # Media and documentation assets
 ```
----
 
 ## References & Acknowledgments
 
