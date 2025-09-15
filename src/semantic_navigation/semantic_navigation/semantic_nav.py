@@ -203,21 +203,21 @@ If they ask for a specific object (like "refrigerator" or "toilet"), set target_
         
         # Check if Nav2 is active
         if self.navigator.isTaskComplete():
-            self.get_logger().info("✅ Nav2 system is ready")
+            self.get_logger().info("Nav2 system is ready")
         else:
-            self.get_logger().warn("⚠️  Nav2 system status unknown")
+            self.get_logger().warn(" Nav2 system status unknown")
         
         # Check semantic memory (updated for simplified structure)
         objects_count = len(self.semantic_memory.get("objects", {}))
         scenes_count = len(self.semantic_memory.get("scenes", {}))
         
-        self.get_logger().info(f"📍 Semantic memory: {objects_count} objects, {scenes_count} scenes")
+        self.get_logger().info(f"Semantic memory: {objects_count} objects, {scenes_count} scenes")
         
         if objects_count == 0:
-            self.get_logger().warn("⚠️  No objects found - make sure perception node is running and exploring")
+            self.get_logger().warn(" No objects found - make sure perception node is running and exploring")
         
         if scenes_count == 0:
-            self.get_logger().warn("⚠️  No scenes found - make sure perception node has explored different room types")
+            self.get_logger().warn("  No scenes found - make sure perception node has explored different room types")
         
         # Note about frame configuration
         self.get_logger().info("📋 Navigation using odom frame - ensure Nav2 global_frame is set to 'odom'")
@@ -274,9 +274,9 @@ def main():
             success = node.navigate_to_target(user_input)
             
             if success:
-                print("✅ Navigation completed successfully!")
+                print("Navigation completed successfully!")
             else:
-                print("❌ Navigation failed")
+                print("Navigation failed")
                 
     except KeyboardInterrupt:
         print("\nExiting...")

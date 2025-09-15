@@ -111,9 +111,9 @@ class SemanticPerceptionNode(Node):
 {bbox_info}
 
 ROOM TYPES (choose exactly one):
-1. "main office room" - workspace with desks, chairs, computers, bookshelves
-2. "break room" - relaxation area with sofas, refrigerator, water dispenser, coffee area
-3. "bathroom" - restroom with toilet, sink, bathroom fixtures
+1. "main office room" - workspace with desks, chairs,
+2. "break room" - relaxation area with sofas, refrigerator, water dispenser, bookshelves
+3. "bathroom" - restroom with toilet, sink
 
 INSTRUCTIONS:
 1. SCENE TYPE: Classify this room as exactly one of: "main office room", "break room", or "bathroom"
@@ -121,7 +121,7 @@ INSTRUCTIONS:
 2. YOLO OBJECT LABELING: For each YOLO bounding box listed above, identify what object is inside that box:
    - Look at the specific region defined by each bounding box coordinates
    - Label the main object within each bounding box
-   - Use semantic labels like: desk, chair, sofa, refrigerator, water dispenser, bookshelf, toilet, sink, computer, etc.
+   - Use semantic labels like: desk, chair, sofa, refrigerator, water dispenser, bookshelf, toilet etc.
 
 3. SPATIAL LAYOUT: Describe the overall room layout and object arrangements
 
@@ -135,8 +135,7 @@ Please format your response as JSON:
     "spatial_layout": "description of room layout and object arrangements",
     "confidence": 0.9
 }}"""
-            
-            # Call OpenAI Vision API
+          
             response = self.openai_client.chat.completions.create(
                 model="gpt-4o-mini",  # Using the latest vision model
                 messages=[
@@ -310,7 +309,6 @@ Please format your response as JSON:
                 json.dump(self.semantic_memory, f, indent=4)
         except Exception as e:
             self.get_logger().error(f"Failed to save semantic memory: {e}")
-# Add these debug lines to your callbacks:
 
     def rgb_callback(self, msg):
         try:
